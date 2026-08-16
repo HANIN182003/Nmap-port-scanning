@@ -1,139 +1,126 @@
-# Nmap-port-scanning
-Nmap port scanning and service detection.
-Network Discovery and Port Scanning with Nmap
+# Network Discovery and Port Scanning with Nmap
 
-Project Overview
+## Project Overview
 
 A practical cybersecurity project focused on network discovery, host identification, port scanning, service detection, and basic operating system identification using Nmap and Zenmap.
 
-The project was performed in a controlled/local network environment for educational and cybersecurity learning purposes.
+The project was performed in a controlled local network environment for educational and cybersecurity learning purposes.
 
-Objectives
+## Objectives
 
-* Discover active devices on a local network.
-* Identify open, filtered, and closed ports.
-* Detect running network services.
-* Identify service versions where available.
-* Perform basic operating system detection.
-* Visualize discovered hosts using Zenmap topology.
+- Discover active devices on a local network.
+- Identify open, filtered, and closed ports.
+- Detect running network services.
+- Identify service versions where available.
+- Perform basic operating system detection.
+- Visualize discovered hosts using Zenmap.
 
-Tools Used
+## Tools Used
 
-* Nmap
-* Zenmap
-* Windows
+- Nmap
+- Zenmap
+- Windows
 
-Network Range
+## Network Range
 
-The scan was performed against the local private network:
+The scan was performed against the following private network:
 
 192.168.1.0/24
 
-> *Note:* The scan was conducted only on a network where I had authorization to perform security testing.
+## Scanning Activities
 
-Scanning Activities
+### 1. Network Discovery
 
-1. Network Discovery
+Nmap was used to identify active hosts within the local network.
 
-Nmap was used to identify active hosts within the local network range.
+### 2. Port Scanning
 
-The scan identified multiple hosts that were online and available for further analysis.
+The discovered hosts were scanned to identify open, filtered, and closed ports.
 
-2. Port Scanning
+### 3. Service Detection
 
-The discovered hosts were scanned to identify network ports and their current states.
+Nmap was used to identify services running on detected ports, including services such as SSH, Telnet, HTTP, and UPnP.
 
-The results included:
+### 4. Operating System Detection
 
-* Open ports
-* Filtered ports
-* Closed ports
+Nmap was used to perform basic operating system detection based on network responses.
 
-3. Service Detection
+### 5. Network Topology
 
-Nmap was used to identify services associated with detected ports.
+Zenmap was used to visualize the discovered hosts and network topology.
 
-Examples observed during the scan included:
+## Results
 
-* SSH
-* Telnet
-* HTTP
-* UPnP
+The scan provided information about:
 
-4. Operating System Detection
+- Active hosts
+- Open ports
+- Filtered ports
+- Network services
+- Service versions
+- Operating system information
+- Network topology
 
-Nmap’s OS detection capability was used to estimate the operating system of a discovered host based on network responses.
+## Security Observations
 
-5. Network Topology
+The results demonstrate the importance of reviewing exposed network services.
 
-Zenmap’s topology view was used to visualize the relationships between discovered hosts on the network.
+Security recommendations include:
 
-Results
+- Disable unnecessary services.
+- Avoid insecure protocols such as Telnet when secure alternatives are available.
+- Restrict access to administrative services such as SSH.
+- Review exposed ports and firewall rules.
+- Keep network services updated.
 
-The scan demonstrated how Nmap can be used for basic network reconnaissance and security assessment.
+## Screenshots
 
-The results provided information about:
+### Nmap Scan Output
 
-* Active hosts
-* Exposed network ports
-* Available services
-* Service versions
-* Operating system information
-* Network topology
+![Nmap Scan Output](nmap-scan-output.png)
 
-Security Observations
+### Ports and Services
 
-Open network services should be reviewed to determine whether they are necessary.
+![Ports and Services](ports-services.png)
 
-Examples of security considerations:
+### Network Topology
 
-* Disable unnecessary services.
-* Avoid insecure protocols such as Telnet when secure alternatives are available.
-* Restrict access to administrative services such as SSH.
-* Review exposed ports and firewall rules.
-* Keep network services updated.
+![Network Topology](network-topology.png)
 
-Screenshots
+### Host Details
 
-Screenshots from the scan are included in this repository to document the practical results.
+![Host Details](host-details.png)
 
-Nmap Scan Output
+### Scan Results
 
-Nmap Scan Output
+![Scan Results](scan-results.png)
 
-Ports and Services
+### Operating System Detection
 
-Ports and Services
+![Operating System Detection](os-detection.png)
 
-Network Topology
+## Skills Demonstrated
 
-Network Topology
+- Network Reconnaissance
+- Network Discovery
+- Port Scanning
+- Service Enumeration
+- Basic OS Detection
+- Nmap
+- Zenmap
+- Networking Fundamentals
+- Security Assessment
+- Technical Documentation
 
-Host Details
-
-Host Details
-
-Skills Demonstrated
-
-* Network Reconnaissance
-* Network Discovery
-* Port Scanning
-* Service Enumeration
-* Basic OS Detection
-* Nmap
-* Zenmap
-* Networking Fundamentals
-* Security Assessment
-
-Ethical Use
+## Ethical Use
 
 This project is intended for educational and authorized security testing only.
 
 Nmap scans should only be performed against systems and networks that you own or have explicit permission to test.
 
-Future Improvements
+## Future Improvements
 
-* Export scan results automatically to XML/HTML reports.
-* Add a Python script to summarize Nmap results.
-* Categorize discovered services by risk level.
-* Add basic vulnerability assessment in a controlled lab environment.
+- Export scan results automatically to XML or HTML reports.
+- Develop a Python script to summarize Nmap results.
+- Categorize discovered services by risk level.
+- Add vulnerability assessment in a controlled lab environment.
